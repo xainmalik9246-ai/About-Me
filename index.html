@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain Ullah - Professional Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #E06F16;
+            --text-label: #B8B8B8;
+            --text-value: #422D16;
+            --bg-white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--bg-white);
+            width: 100%;
+            max-width: 850px;
+            border-radius: 24px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* --- CONTENT SECTION --- */
+        .content {
+            flex: 1.2;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 5; /* Ensure text stays clear */
+        }
+
+        .content h1 {
+            color: var(--primary-orange);
+            font-size: 3rem;
+            margin-bottom: 35px;
+            font-weight: 700;
+        }
+
+        .info-group {
+            margin-bottom: 22px;
+        }
+
+        .label {
+            color: var(--text-label);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .value {
+            color: var(--text-value);
+            font-size: 1.15rem;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-orange);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 25px;
+            transition: 0.3s ease;
+            width: fit-content;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #c66013;
+            transform: translateY(-2px);
+        }
+
+        /* --- IMAGE SECTION --- */
+        .image-section {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .orange-shape {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-orange);
+            clip-path: circle(80% at 110% 50%);
+            z-index: 1; /* Background layer */
+        }
+
+        .profile-circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 12px solid white;
+            overflow: hidden;
+            z-index: 10; /* Brought to absolute front */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            position: relative;
+            background: #eee;
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+                max-width: 380px;
+                border-radius: 30px;
+                margin-top: 50px;
+            }
+
+            .image-section {
+                order: 1;
+                min-height: 200px;
+                background: var(--primary-orange);
+            }
+
+            .orange-shape {
+                display: none;
+            }
+
+            .profile-circle {
+                width: 180px;
+                height: 180px;
+                border-width: 6px;
+                position: absolute;
+                bottom: -50px; /* Overlaps into content */
+            }
+
+            .content {
+                order: 2;
+                padding: 70px 30px 40px 30px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .content h1 {
+                font-size: 2.2rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="content">
+            <h1>Zain Ullah</h1>
+
+            <div class="info-group">
+                <span class="label">EMAIL</span>
+                <a href="mailto:uzain7285@gmail.com" class="value">uzain7285@gmail.com</a>
+            </div>
+
+            <div class="info-group">
+                <span class="label">ROLE</span>
+                <span class="value">Lead Designer</span>
+            </div>
+
+            <div class="info-group">
+                <span class="label">PHONE</span>
+                <span class="value">+923010587737</span>
+            </div>
+
+            <a href="/mycvfile.pdf" download="Zain_Ullah_CV.pdf" class="btn">
+                DOWNLOAD CV &nbsp; ⬇
+            </a>
+        </div>
+
+        <div class="image-section">
+            <div class="orange-shape"></div>
+            <div class="profile-circle">
+                <img src="/examplelogo.png" alt="Zain Ullah">
+</div>
+        </div>
+    </div>
+
+</body>
+</html>
